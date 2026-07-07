@@ -82,7 +82,8 @@ try:
         sam_path = os.path.join(model_path, "sams")
         onnx_path = os.path.join(model_path, "onnx")
 
-        if not os.path.exists(os.path.join(os.path.dirname(__file__), '..', 'skip_download_model')):
+        if False:  # NEUTERED: без внешнего скачивания SAM (fbaipublicfiles) на Salad
+
             try:
                 if not os.path.exists(os.path.join(sam_path, "sam_vit_b_01ec64.pth")):
                     download_url("https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth", sam_path)
